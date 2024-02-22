@@ -1,10 +1,15 @@
 import './App.css'
-import img1 from '../public/img/img_1.png'
+
+import TopoPagina from './componentes/TopoPagina'
 
 function App() {
 
   return (
-    <img src ={img1} alt='imagem capa'/>
+    <>
+    <TopoPagina/>
+      
+    </>
+    
   )
 }
 
