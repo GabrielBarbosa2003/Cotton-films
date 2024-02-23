@@ -1,0 +1,8 @@
+/* assets/fonts.css */
+@import-normalize;
+
+
+@font-face {
+    font-family: 'AbrilFatfaceRegular';
+    src: local('AbrilFatfaceRegular'), url('./AbrilFatface-Regular.ttf') format('truetype');
+}

@@ -1,5 +1,3 @@
-import './App.css'
-
 import TopoPagina from './componentes/TopoPagina'
 
 function App() {
