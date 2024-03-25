@@ -1,6 +1,39 @@
+.container{
+    width: 100%;
+
+
+}
+.galeria{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+
+}
+.image{
+    width: 90%;
+    height: 558px;
+    position: absolute;
+
+
+}
+.quadrados{
+    width: 451px;
+    height: 558px;
+}
+
+
 .logo_galeria{
     padding-top: 7rem;
+    padding-bottom: 85px;
     padding-left: 2rem;
+    width: 100%;
+    
+}
+.logo_galeria img{
     width: 31.25rem;
     height: 7.25rem;
+    
 }
