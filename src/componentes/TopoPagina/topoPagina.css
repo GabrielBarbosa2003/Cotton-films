@@ -5,9 +5,9 @@
    height: 67.5rem;
 }
 .imagem_banner{
-   max-width: 100%;
-   width:120rem ;
-   height: 90%;
+   width:100% ;
+   max-width: 120rem;
+   height: 67.5rem;
    position: absolute;
    background-size: cover;
    z-index: -1;
@@ -27,28 +27,32 @@
    max-width: 100%;
 }
 
-.texto_lorem{
+
+.texto_lorem .container{
+   display: flex;
+   flex-direction: row;
    padding-top: 7.9375rem;
-   display: grid;
-   grid-gap: 20rem;
-   grid-template-columns: 50.75rem 28.25rem;
-   height: 30rem;
-   width: 70rem;
+   align-items: center;
+   justify-content: space-between;
 }
-.texto_grid{
+.texto_lorem .container .texto_grid{
    color: #4F4F4F;
-   padding-left: 2rem;
+   max-width: 50.75rem;
+   width: 100%;
+   line-height: 150%;
+   font-size: 2rem;
+   letter-spacing: -4%;
 
 }
 
 .texto_grid span{
    color: white;
-}
-.imagem_grid{
-   width: 28.25rem;
-   height: 13.9375rem;
    
-
+}
+.texto_lorem .container .imagem_grid img{
+   width: 100%;
+   max-width: 28.25rem;
+   
 }
 
 
@@ -59,24 +63,68 @@
 }
 @media(max-width: 1200px){
    .home{
-      
+      height: auto;
    }
    .imagem_banner{
-      height: 60%;
+      height: auto;
    }
    .home .container{
-      padding-top: 250px;
+      padding-top: 15.625rem;
+   }
+
+   .texto_lorem .container{
+      padding-top: 15.625rem;
+   }
+
+   .texto_lorem .container .texto_grid{
+      max-width: 50.75rem;
+      width: 100%;
+      font-size: 1.5rem;
+      
    }
 }
 @media(max-width: 991px){
-
+   .home .container{
+      padding-top: 14rem;
+   }
+   .texto_lorem .container .texto_grid{
+      max-width: 50.75rem;
+      width: 100%;
+      font-size: 1.2rem;
+   }
 }
 @media(max-width: 768px){
-   
+   .texto_lorem .container{
+      padding-top: 10rem;
+   }
+   .texto_lorem .container .texto_grid{
+      max-width: 70.75rem;
+      width: 80%;
+      font-size: 1rem;
+   }
+   .texto_lorem .container .imagem_grid img{
+      width: 100%;
+      max-width: 28.25rem;
+      
+   }
+  
 }
 @media(max-width: 600px){
-   
+   .home .container{
+      padding-top: 10.625rem;
+   }
 }
 @media(max-width: 480px){
-  
+   .home .container{
+      padding-top: 5.625rem;
+   }
+   .texto_lorem .container{
+      padding-top: 7rem;
+   }
+   .texto_lorem .container .texto_grid{
+      max-width: 50.75rem;
+      width: 100%;
+      font-size: 0.5rem;
+      
+   }
 }

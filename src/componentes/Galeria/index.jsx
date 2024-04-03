@@ -1,8 +1,8 @@
 import galeria_img from '../../assets/img/galeria.png'
-import styles from './galeria.module.css'
 import img1 from '../../assets/img/carrosel1.png'
 import img2 from '../../assets/img/carrosel2.png'
 import img3 from '../../assets/img/carrosel3.png'
+import './galeria.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import Swiper styles
@@ -22,53 +22,53 @@ export default function Galeria() {
     { id: '3', image: img3 }
   ]
   return (
-    <section className={styles.container}>
-      <div className={styles.logo_galeria}>
+    <section className="container">
+      <div className="logo_galeria">
         <img src={galeria_img} alt='' />
       </div>
       
-      <div className={styles.galeria}>
+      <div className="galeria">
         <Swiper
           navigation={true}
           modules={[Navigation, Grid]}
           slidesPerView={3}
-          className={styles.image}>
+          className="image"
+          loop={true}>
 
           <SwiperSlide>
-            <div className={styles.quadrados}>
+            <div className="quadrados">
               <img src={img1} alt='' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.quadrados}>
+            <div className="quadrados">
               <img src={img2} alt='' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.quadrados}>
+            <div className="quadrados">
               <img src={img3} alt='' />
             </div>
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className={styles.quadrados}>
-              <img src={img3} alt='' />
+            <div className="quadrados">
+              <img src={img1} alt='' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.quadrados}>
-              <img src={img3} alt='' />
+            <div className="quadrados">
+              <img src={img2} alt='' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.quadrados}>
+            <div className="quadrados">
               <img src={img3} alt='' />
             </div>
           </SwiperSlide>
 
 
         </Swiper>
-
 
       </div>
     </section>

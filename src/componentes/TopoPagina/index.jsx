@@ -43,21 +43,24 @@ export default function TopoPagina() {
           </div>
 
         </div>
-        
-        <div className="texto_lorem">
+
+      </header>
+
+      <div className="texto_lorem">
+        <div className="container">
 
           <div className="texto_grid">
-            <h1><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum </span> rerum dolore. Consequatur, quisquam? Repudiandae libero consequatur
-              praesentium reprehenderit enim sed facere velit, id, eligendi numquam delectus maiores porro cumque?</h1>
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum </span> rerum dolore. Consequatur, quisquam? Repudiandae libero consequatur
+              praesentium reprehenderit enim sed facere velit, id, eligendi numquam delectus maiores porro cumque?</p>
           </div>
-
 
           <div className="imagem_grid">
             <img src={frame} alt='' />
           </div>
 
         </div>
-      </header>
+
+      </div>
 
 
 
