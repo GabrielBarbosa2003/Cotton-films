@@ -1,5 +1,6 @@
 import TopoPagina from './componentes/TopoPagina'
 import Galeria from './componentes/Galeria'
+import Services from './componentes/Services'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <TopoPagina />
       <Galeria/>
+      <Services/>
     </>
   )
 }

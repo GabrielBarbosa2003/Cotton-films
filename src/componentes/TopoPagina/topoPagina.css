@@ -95,7 +95,7 @@
 }
 @media(max-width: 768px){
    .texto_lorem .container{
-      padding-top: 10rem;
+      padding-top: 8rem;
    }
    .texto_lorem .container .texto_grid{
       max-width: 70.75rem;
