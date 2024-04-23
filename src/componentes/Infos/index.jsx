@@ -42,7 +42,7 @@ export default function Infos() {
                 <div>
 
                 </div>
-                <div>
+                <div className='text'>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a 
                         luctus metus. Morbi fermentum nulla vel nunc vulputate fringilla. Etiam suscipit 
                         porttitor neque, in fringilla libero. Lorem ipsum dolor sit amet, 

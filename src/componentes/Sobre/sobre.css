@@ -1,0 +1,145 @@
+.section{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.section .about{
+    position: absolute;
+    z-index: 1;
+    padding-top: 50px;
+    padding-left: 200px;
+}
+.sobre{
+    display: grid;
+    grid-template-columns: 50% 50%;  
+    position: relative;
+}
+.sobre .sobre_img img{
+    width: 100%;
+    max-width: 42.0625rem;
+}
+.sobre .sobre_texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sobre_texto .texto_sobre{
+    width: 30rem;
+    height: 19.5rem;
+    line-height: 150%;
+    letter-spacing: -4%;
+    
+}
+.sobre .about{
+    position: absolute;
+    
+}
+
+.sobre_texto .redes{
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    
+}
+.sobre_texto .redes img{
+    padding-left: 20px;
+    
+}
+
+
+
+/* responsivo */
+@media(max-width: 1400px){
+  
+}
+@media(max-width: 1200px){
+  
+}
+@media(max-width: 991px){
+    .sobre_texto .texto_sobre{
+        width: 25rem;
+        height: 15rem;
+        line-height: 150%;
+        letter-spacing: -4%;
+    }
+    .section .about{
+        padding-top: 1.875rem;
+        
+    }
+    .sobre_texto .redes{
+        bottom: 20px;
+        
+    }
+    .sobre_texto .redes img{
+        padding-left: 20px;
+        width: 70px;
+        
+    }
+}
+@media(max-width: 768px){
+    .sobre_texto .texto_sobre{
+        width: 20rem;
+        height: 5rem;
+        line-height: 150%;
+        letter-spacing: -4%;
+        font-size: 11px;
+    }
+    .section .about{
+        padding-top: 1.875rem;
+        
+    }
+    .about img{
+        width: 100%;
+        max-width: 350px;
+    }
+   
+}
+@media(max-width: 600px){
+    .sobre_texto .texto_sobre{
+        width: 15rem;
+        line-height: 150%;
+        letter-spacing: -4%;
+        font-size: 9px;
+    }
+    .section .about{
+        padding-top: 1.875rem;
+        
+    }
+    .about img{
+        padding-top: 0px;
+        width: 100%;
+        max-width: 200px;
+    }
+    .sobre_texto .redes img{
+       width: 40px;
+        
+    }
+}
+@media(max-width: 480px){
+    .sobre_texto .texto_sobre{
+        width: 10rem;
+        line-height: 150%;
+        letter-spacing: -4%;
+        font-size: 6px;
+    }
+    .section .about{
+        padding-left: 0px;
+        padding-top: 0px;
+        width: 100%;
+        max-width: 100px;
+        
+    }
+  
+    .about img{
+        padding-top: 0px;
+        width: 100%;
+        max-width: 200px;
+    }
+    .sobre_texto .redes{
+        bottom: 10px;
+         
+    }
+ 
+}

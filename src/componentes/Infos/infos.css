@@ -6,12 +6,21 @@
     justify-content: space-between;
 }
 .cards .card{
-    border: 2px #333333 solid;
-    border-bottom: none;
     width: 100%;
     max-width: 17rem;
     height: 23rem;
     position: relative;
+    border: 2px #333333 solid;
+    border-bottom: none;
+    border-image: linear-gradient(#333333, rgba(0, 0, 0, 0)) 27;
+    /* border-image: 
+    linear-gradient(
+      to bottom, 
+      #333333, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%; */
+    
+    
 }
 
 .card .card_top{
@@ -34,6 +43,10 @@
     display: grid;
     grid-template-columns: 50% 50%;
     padding-top: 7.75rem;
+}
+
+.text{
+    text-indent:4rem
 }
 
 

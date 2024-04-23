@@ -1,0 +1,29 @@
+.cads_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 100%;
+    max-width: 332px;
+    height: 466px;
+}
+
+.card .card_bottom{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card_bottom .projeto_nome p{
+    font-size: 10px;
+    color: white;
+    
+}
+
+.card_bottom .direct p{
+    font-size: 10px;
+    
+}
+.card_bottom .direct span{
+    text-indent:4rem;
+    
+}
