@@ -1,0 +1,103 @@
+.image_bottom{
+    background-image: url(../../assets/img/contato3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    text-align: center;
+    position: relative;
+
+}
+
+.container .talk img{
+    width: 100%;
+    height: 19.1875rem;
+ 
+}
+.bottom_grid{
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+}
+.bottom_grid .grid_esquerda img{
+    position: absolute;
+    bottom: 3.125rem;
+}
+.bottom_grid .grid_esquerda h1{
+    position: absolute;
+    padding-top: 28.125rem;
+    font-size: 3.125rem;
+}
+.bottom_grid .grid_direita{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25rem;
+    
+}
+
+.grid_direita .grid_contatos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+.contatos_flex ul{
+    padding: 0px;
+}
+
+/* responsivo */
+@media(max-width: 1400px){
+  
+}
+@media(max-width: 1200px){
+  
+}
+@media(max-width: 991px){
+    .bottom_grid .grid_esquerda h1{
+        font-size: 2.5rem;
+    }
+}
+@media(max-width: 768px){
+    .bottom_grid .grid_esquerda h1{
+        font-size: 1.875rem;
+    }
+   
+}
+@media(max-width: 600px){
+    .bottom_grid .grid_esquerda h1{
+        font-size: 25px;
+    }
+    .contatos_flex ul{
+        width: 10px;
+    }
+}
+
+@media(max-width: 480px){
+    .bottom_grid .grid_esquerda h1{
+        font-size: 15px;
+    }
+    .grid_contatos .cttn{
+        width: 6.25rem;
+    }
+    .grid_direita .grid_contatos{
+       display: flex;
+       
+       
+    }
+    .grid_direita .grid_contatos img{
+        width: 3.125rem;
+        
+     }
+     .bottom_grid .grid_direita{
+        padding-top: 25rem;
+        margin-right: 80px;
+        
+    }
+    .contatos_flex ul li{
+        padding: 0px;
+    
+    }
+     
+
+}
