@@ -2,6 +2,7 @@ import galeria_img from '../../assets/img/galeria.png'
 import img1 from '../../assets/img/carrosel1.png'
 import img2 from '../../assets/img/carrosel2.png'
 import img3 from '../../assets/img/carrosel3.png'
+import ver_case from '../../assets/img/ver_case.svg'
 import './galeria.css'
 import '../../grid.css'
 
@@ -12,9 +13,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/grid';
 import { Navigation, Grid } from 'swiper/modules'
 
+import { delay, motion } from "framer-motion"
+
+import { useState } from 'react'
+
 
 
 export default function Galeria() {
+
+  const [hover, setHover] = useState(false);
+  console.log(hover)
+
 
   const imagens = [
 
@@ -37,37 +46,103 @@ export default function Galeria() {
             className="image"
             loop={true}
             spaceBetween={10}
-            >
+          >
 
             <SwiperSlide>
-              <div className="quadrados">
-                <img src={img1} alt='' />
+              <div className="quadrados"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <motion.img
+                  src={img1} alt=''
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                />
+                <div className={hover ? 'case element' : ' case element hidden'}>
+                  <img src={ver_case} alt='' />
+                </div>
               </div>
             </SwiperSlide>
+
+
             <SwiperSlide>
-              <div className="quadrados">
-                <img src={img2} alt='' />
+              <div className="quadrados"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <motion.img
+                  src={img2} alt=''
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                />
+                <div className={hover ? 'case element' : ' case element hidden'}>
+                  <img src={ver_case} alt='' />
+                </div>
               </div>
+
             </SwiperSlide>
+
             <SwiperSlide>
-              <div className="quadrados">
-                <img src={img3} alt='' />
+              <div className="quadrados"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <motion.img
+                  src={img3} alt=''
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                />
+                <div className={hover ? 'case element' : ' case element hidden'}>
+                  <img src={ver_case} alt='' />
+                </div>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="quadrados">
-                <img src={img1} alt='' />
+              <div className="quadrados"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <motion.img
+                  src={img1} alt=''
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                />
+                <div className={hover ? 'case element' : ' case element hidden'}>
+                  <img src={ver_case} alt='' />
+                </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
-              <div className="quadrados">
-                <img src={img2} alt='' />
+              <div className="quadrados"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <motion.img
+                  src={img2} alt=''
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                />
+                <div className={hover ? 'case element' : ' case element hidden'}>
+                  <img src={ver_case} alt='' />
+                </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
-              <div className="quadrados">
-                <img src={img3} alt='' />
+              <div className="quadrados"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <motion.img
+                  src={img3} alt=''
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                />
+                <div className={hover ? 'case element' : ' case element hidden'}>
+                  <img src={ver_case} alt='' />
+                </div>
               </div>
             </SwiperSlide>
 
