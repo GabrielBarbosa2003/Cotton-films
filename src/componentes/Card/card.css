@@ -1,0 +1,31 @@
+.quadrados{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.quadrados img{
+    width: 100%;
+    max-width: 28.125rem;
+    position: relative; 
+}
+
+.quadrados .case{
+    width: 100%;
+    max-width: 150px;
+    position: absolute;
+    
+}
+
+.element {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.2s linear 0.10s; /* delay de 0.5s para começar a transição de visibility */
+  }
+  
+  .element.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s linear 0.5s; /* delay mantido para a visibilidade */
+  }
