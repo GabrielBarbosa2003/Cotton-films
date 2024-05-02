@@ -2,10 +2,15 @@ import './services.css'
 import '../../grid.css'
 import image from '../../assets/img/service.png'
 import img1 from '../../assets/img/img1_services.png'
+import img2 from '../../assets/img/carrosel1.png'
+import img3 from '../../assets/img/carrosel2.png'
+import img4 from '../../assets/img/carrosel3.png'
 import logo_service from '../../assets/img/logo_service.svg'
 import seta from '../../assets/img/seta.svg'
 
 export default function Services() {
+
+
   return (
     <>
       <div className='image_service'>
@@ -16,9 +21,11 @@ export default function Services() {
           <div className='service_logo'>
             <img src={logo_service} alt='' />
           </div>
+
           <div className='images'>
             <img src={img1} alt='' />
           </div>
+
           <div className='images_services'>
             <div className='lista_images'>
               <p>// NAME OF SERVICE</p>

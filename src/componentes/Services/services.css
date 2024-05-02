@@ -7,15 +7,28 @@
     flex-direction: column;
     padding-top: 3.75rem;
 }
+
 .images_services .lista_images{
     display: flex;
-    border-bottom: 1px #E6E6E6 solid;
+    border-bottom: 1px #333333 solid;
+    color: #333333;
+    transition: color 0.5s ease, border-bottom 0.5s ease;
     padding-top: 3.125rem;
     justify-content: space-between;
+}
+.images_services .lista_images img{
+    filter:#333333 ;
 }
 .images_services .lista_images p{
     padding-bottom: 1.6875rem;
 }
+
+.images_services .lista_images:hover{
+    color: #E6E6E6;
+    border-color: #E6E6E6;
+}
+
+
 
 .container{
     position: relative;
