@@ -7,15 +7,29 @@ import './topoPagina.css'
 import '../../grid.css'
 
 import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Lenis from '@studio-freight/lenis'
 
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { TextPlugin } from "gsap/TextPlugin";
 
 
-gsap.registerPlugin(ScrollToPlugin, TextPlugin);
+
+
+gsap.registerPlugin(ScrollTrigger)
 
 
 export default function TopoPagina() {
+  const lenis = new Lenis()
+
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
   //replaces yourElement's text with "This is the new text" 
   // gsap.to(yourElement, {
   //   duration: 2,
