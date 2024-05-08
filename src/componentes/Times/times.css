@@ -1,31 +1,10 @@
 .cads_flex{
     display: flex;
     justify-content: space-between;
-}
-.card img{
-    width: 100%;
-
+    align-items: center;
 }
 
-.card .card_bottom{
-    display: flex;
-    justify-content: space-between;
-    
-}
-.card_bottom .projeto_nome p{
-    font-size: 10px;
-    color: white;
-    
-}
 
-.card_bottom .direct p{
-    font-size: 10px;
-    
-}
-.card_bottom .direct span{
-    text-indent:4rem;
-    
-}
 
 .ourtime{
     display: flex;

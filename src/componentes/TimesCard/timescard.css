@@ -1,0 +1,66 @@
+.card .card_top_times{
+    overflow: hidden;
+    width: 100%;
+    max-width: 332px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.card .card_top_times img{
+    position: relative;
+   
+   
+}
+.card .card_top_times .bio{
+    position: absolute;
+    
+    
+}
+.card .card_top_times .bio img{
+    width: 100%;
+    max-width: 150px;
+    
+}
+
+.element{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.2s linear 0.1s;
+}
+
+.element.hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.2s linear 0.1s;
+    pointer-events: none;
+}
+
+
+
+
+
+.card .card_bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 330px;
+    
+    
+}
+.card_bottom .projeto_nome p{
+    font-size: 10px;
+    color: white;
+    
+}
+
+.card_bottom .direct p{
+    font-size: 10px;
+    
+}
+.card_bottom .direct span{
+    text-align: right;
+    
+}

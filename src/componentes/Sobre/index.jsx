@@ -6,6 +6,9 @@ import insta from '../../assets/img/insta.png'
 import save from '../../assets/img/save.png'
 import dri from '../../assets/img/dri.png'
 
+import { motion } from "framer-motion"
+
+
 export default function Sobre() {
   return (
     <div className='container'>
@@ -40,9 +43,25 @@ export default function Sobre() {
             </div>
 
             <div className='redes'>
-              <img src={insta} alt='' />
-              <img src={save} alt='' />
-              <img src={dri} alt='' />
+              <motion.img
+                src={insta} 
+                alt=''
+                whileHover={{scale:1.1}}
+                transition={{duration:0.2}}
+              />
+
+              <motion.img 
+                src={save} 
+                alt='' 
+                whileHover={{scale:1.1}}
+                transition={{duration:0.2}}
+              />
+              <motion.img 
+                src={dri} 
+                alt='' 
+                whileHover={{scale:1.1}}
+                transition={{duration:0.2}}
+              />
             </div>
 
 

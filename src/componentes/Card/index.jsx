@@ -4,7 +4,6 @@ import './card.css'
 
 import { useState } from "react";
 import { motion } from "framer-motion"
-import img1 from '../../assets/img/carrosel1.png'
 
 
 export default function Card({img}) {

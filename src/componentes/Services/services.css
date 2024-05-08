@@ -33,14 +33,21 @@
 .container{
     position: relative;
 }
-.container .images{
+.images{
     position: absolute;
     right: 5rem;
+   
 }
-.container .images img{
+.images img {
+    transition: opacity 0.5s ease;  /* Transição suave para a propriedade opacidade */
+    opacity: 0;                     /* Estado inicial da opacidade quando não está hover */
     width: 100%;
-    max-width: 500px;
-}
+    max-width: 21.5rem;
+  }
+  .images_services:hover .images img {
+    opacity: 1; /* Quando .images_services é hover, a imagem se torna visível */
+  }
+
 
 
 /* responsivo */

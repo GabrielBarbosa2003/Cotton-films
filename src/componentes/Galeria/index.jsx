@@ -38,12 +38,13 @@ export default function Galeria() {
 
 
           <Swiper
-            navigation={true}
+            navigation={false}
             modules={[Navigation, Grid]}
             slidesPerView={3}
             className="image"
             loop={true}
             spaceBetween={10}
+            
           >
             {
               
