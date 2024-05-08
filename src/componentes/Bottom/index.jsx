@@ -7,6 +7,9 @@ import instagram from '../../assets/img/insta2.png'
 import save from '../../assets/img/save2.png'
 import dri from '../../assets/img/dri2.png'
 
+import { motion } from "framer-motion"
+
+
 
 
 
@@ -38,13 +41,28 @@ export default function Bottom() {
                     <img src={contact} alt='' />
                   </li>
                   <li>
-                    <img src={instagram} alt='' />
+                    <motion.img
+                      src={instagram}
+                      alt=''
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.2 }}
+                    />
                   </li>
                   <li>
-                    <img src={save} alt='' />
+                    <motion.img
+                      src={save}
+                      alt=''
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.2 }}
+                    />
                   </li>
                   <li>
-                    <img src={dri} alt='' />
+                    <motion.img
+                      src={dri}
+                      alt=''
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.2 }}
+                    />
                   </li>
                 </ul>
 
