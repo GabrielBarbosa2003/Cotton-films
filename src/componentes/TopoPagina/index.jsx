@@ -9,19 +9,40 @@ import '../../grid.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from '@studio-freight/lenis'
+import SplitType from 'split-type'
 
 
 
-
-
-gsap.registerPlugin(ScrollTrigger)
 
 
 export default function TopoPagina() {
+
+  gsap.registerPlugin(ScrollTrigger)
+  const splitTypes = document.querySelectorAll('.texto_grid')
+  console.log(splitTypes)
+
+  splitTypes.forEach((char,i) => {
+    const text = new SplitType(char, {types: 'chars'})
+
+    gsap.from(text.chars,{
+      scrollTrigger:{
+        trigger: char,
+        start: 'top 80%',
+        end: 'top 20%',
+        scrub: true,
+        markers: false
+      },
+      opacity:0.2,
+      stagger:0.1
+    })
+
+  })
+
+
   const lenis = new Lenis()
 
   lenis.on('scroll', (e) => {
-    console.log(e)
+    console.log()
   })
 
   function raf(time) {
@@ -30,14 +51,7 @@ export default function TopoPagina() {
   }
 
   requestAnimationFrame(raf)
-  //replaces yourElement's text with "This is the new text" 
-  // gsap.to(yourElement, {
-  //   duration: 2,
-  //   text: "This is the new text",
-  //   ease: "none",
-  // });
 
-  // pra adicionar o menu, só chamar o componente <Menu/>
 
 
 
