@@ -10,33 +10,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from '@studio-freight/lenis'
 import SplitType from 'split-type'
+import { useEffect } from 'react'
 
 
 
 
 
 export default function TopoPagina() {
-
-  gsap.registerPlugin(ScrollTrigger)
-  const splitTypes = document.querySelectorAll('.texto_grid')
-  console.log(splitTypes)
-
-  splitTypes.forEach((char,i) => {
-    const text = new SplitType(char, {types: 'chars'})
-
-    gsap.from(text.chars,{
-      scrollTrigger:{
-        trigger: char,
-        start: 'top 80%',
-        end: 'top 20%',
-        scrub: true,
-        markers: false
-      },
-      opacity:0.2,
-      stagger:0.1
-    })
-
-  })
 
 
   const lenis = new Lenis()
@@ -51,6 +31,32 @@ export default function TopoPagina() {
   }
 
   requestAnimationFrame(raf)
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+    const splitTypes = document.querySelectorAll('.texto_grid')
+  
+    splitTypes.forEach((char,i) => {
+      const text = new SplitType(char, {types: 'chars'})
+  
+      gsap.from(text.chars,{
+        scrollTrigger:{
+          trigger: char,
+          start: 'top 80%',
+          end: 'top 20%',
+          scrub: true,
+          markers:false
+        },
+        opacity:0.2,
+        stagger:0.1
+      })
+  
+    })
+
+  },[])
+
+ 
+
 
 
 
@@ -78,7 +84,7 @@ export default function TopoPagina() {
         <div className="container">
 
           <div className="texto_grid">
-            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum </span> rerum dolore. Consequatur, quisquam? Repudiandae libero consequatur
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum rerum dolore. Consequatur, quisquam? Repudiandae libero consequatur
               praesentium reprehenderit enim sed facere velit, id, eligendi numquam delectus maiores porro cumque?</p>
           </div>
 

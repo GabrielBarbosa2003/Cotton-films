@@ -8,6 +8,11 @@ import our from '../../assets/img/our.png'
 import time from '../../assets/img/time.png'
 import TimesCard from '../TimesCard'
 
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 
 
 
@@ -17,31 +22,54 @@ import TimesCard from '../TimesCard'
 export default function Times() {
 
 
-    const images=[
-        {id:'1',img:time1},
-        {id:'2',img:time2},
-        {id:'3',img:time3},
-        {id:'4',img:time4}
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.registerPlugin(useGSAP);
+
+        let panels = gsap.utils.toArray(".teste");
+
+        ScrollTrigger.create({
+            trigger: panels,
+            start: "top top",
+            pin: true,
+            pinSpacing:false,
+            markers: true
+        })
+
+    }, [])
+
+
+    const images = [
+        { id: '1', img: time1 },
+        { id: '2', img: time2 },
+        { id: '3', img: time3 },
+        { id: '4', img: time4 }
     ]
 
     return (
-        <div className='container'>
-            <div className='cads_flex'>
-                {
-                    images.map((image)=> (
-                        <div>
+        <div className='teste'>
+            <div className='container'>
+                <div className='cads_flex'>
+                    {
+                        images.map((image) => (
+                            <div>
 
-                        <TimesCard id={image.id} img={image.img}/>
-                        </div>
-                    ))
+                                <TimesCard id={image.id} img={image.img} />
+                            </div>
+                        ))
 
-                }
+                    }
+                </div>
+                <div className='ourtime'>
+                    <img src={our} alt='' />
+                    <img src={time} alt='' />
+
+                </div>
+
+
             </div>
-            <div className='ourtime'>
-                <img src={our} alt='' />
-                <img src={time} alt='' />
 
-            </div>
+
 
 
 
