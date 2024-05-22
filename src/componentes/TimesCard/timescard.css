@@ -124,5 +124,6 @@
     .card .card_top_times{
         width: 100%;
         max-width: 170px;
+        object-fit: scale-down;
     }
 }
