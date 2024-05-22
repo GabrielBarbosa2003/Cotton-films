@@ -33,32 +33,43 @@ export default function TopoPagina() {
 
   requestAnimationFrame(raf)
 
-  let mm = gsap.matchMedia();
+
+
+
 
   useEffect(() => {
+    let mm = gsap.matchMedia();
     gsap.registerPlugin(ScrollTrigger)
     const splitTypes = document.querySelectorAll('.texto_grid')
-  
-    splitTypes.forEach((char,i) => {
-      const text = new SplitType(char, {types: 'chars'})
-  
-      gsap.from(text.chars,{
-        scrollTrigger:{
-          trigger: char,
-          start: 'top 80%',
-          end: 'top 20%',
-          scrub: true,
-          markers:true
-        },
-        opacity:0.2,
-        stagger:0.1
+
+    splitTypes.forEach((char, i) => {
+      const text = new SplitType(char, { types: 'chars' })
+
+      mm.add({
+        isMobile: "(max-width:480px)",
+        isDesktop: "(min-width:481px)"
+      }, (context) => {
+        let {isMobile, isDesktop} = context.conditions;
+
+
+        gsap.from(text.chars, {
+          scrollTrigger: {
+            trigger: char,
+            start: isMobile ? "top 250px" :'top 80%',
+            end: isMobile ?  "bottom 100px" : 'top 20%',
+            scrub: true,
+            //markers: true
+          },
+          opacity: 0.2,
+          stagger: 0.1
+        })
       })
-  
+
     })
 
-  },[])
+  }, [])
 
- 
+
 
 
 
