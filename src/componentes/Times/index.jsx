@@ -33,7 +33,6 @@ export default function Times() {
             start: "top top",
             pin: true,
             pinSpacing:false,
-            markers: true
         })
 
     }, [])
@@ -53,7 +52,6 @@ export default function Times() {
                     {
                         images.map((image) => (
                             <div>
-
                                 <TimesCard id={image.id} img={image.img} />
                             </div>
                         ))

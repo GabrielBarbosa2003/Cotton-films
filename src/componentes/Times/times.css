@@ -1,4 +1,4 @@
-.cads_flex{
+.cads_flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,7 +6,7 @@
 
 
 
-.ourtime{
+.ourtime {
     display: flex;
     padding-top: 9.4375rem;
     padding-bottom: 113px;
@@ -14,37 +14,40 @@
 
 
 /* responsivo */
-@media(max-width: 1400px){
-  
-}
-@media(max-width: 1200px){
+@media(max-width: 1400px) {}
 
-}
-@media(max-width: 991px){
-  
+@media(max-width: 1200px) {}
 
-}
-@media(max-width: 768px){
-    .ourtime img{
-       width: 100%;
-       max-width: 12.5rem;
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {
+    .ourtime img {
+        width: 100%;
+        max-width: 12.5rem;
     }
 
 }
-@media(max-width: 600px){
 
- 
-}
-@media(max-width: 480px){
-    .card_bottom .projeto_nome p{
-        font-size: 6px; 
-    }
-    .card_bottom .direct p{
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {
+    .card_bottom .projeto_nome p {
         font-size: 6px;
     }
-    .ourtime img{
+
+    .card_bottom .direct p {
+        font-size: 6px;
+    }
+
+    .ourtime img {
         width: 100%;
         max-width: 9.5rem;
-     }
- 
+    }
+
+    .cads_flex{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
 }

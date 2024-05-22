@@ -16,6 +16,7 @@ import { useEffect } from 'react'
 
 
 
+
 export default function TopoPagina() {
 
 
@@ -32,6 +33,8 @@ export default function TopoPagina() {
 
   requestAnimationFrame(raf)
 
+  let mm = gsap.matchMedia();
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
     const splitTypes = document.querySelectorAll('.texto_grid')
@@ -45,7 +48,7 @@ export default function TopoPagina() {
           start: 'top 80%',
           end: 'top 20%',
           scrub: true,
-          markers:false
+          markers:true
         },
         opacity:0.2,
         stagger:0.1
