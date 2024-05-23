@@ -2,6 +2,7 @@ import banner from '../../assets/img/img_1.png'
 import cotonFilms from '../../assets/img/cotonFilms.png'
 import videos from '../../assets/img/videos.png'
 import frame from '../../assets/img/Frame1.png'
+import video1 from '../../assets/videos/video1.mp4'
 import Menu from '../Menu/index.jsx'
 import './topoPagina.css'
 import '../../grid.css'
@@ -79,7 +80,7 @@ export default function TopoPagina() {
     <>
       <header className="home">
         <Menu />
-        <img className="imagem_banner" src={banner} alt='imagem banner' />
+        <video className="imagem_banner" src={video1} autoPlay loop muted alt='' />
 
         <div className='container'>
           <div className="img_films">
