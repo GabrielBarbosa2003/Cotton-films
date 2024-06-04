@@ -16,8 +16,7 @@ import Lenis from '@studio-freight/lenis'
 import SplitType from 'split-type'
 import { useEffect, useRef, useState } from 'react'
 import { Progress } from "@nextui-org/react";
-import { Button, ButtonGroup } from "@nextui-org/react";
-import { Pagination, PaginationItem, PaginationCursor } from "@nextui-org/react";
+
 
 
 
@@ -159,6 +158,10 @@ export default function TopoPagina() {
               <h3>Video 1</h3>
               <h3>[2024]</h3>
             </div>
+            <div className='video_time'>
+              <Progress aria-label="Loading..." value={10} />
+            </div>
+
 
 
 
@@ -189,9 +192,6 @@ export default function TopoPagina() {
               praesentium reprehenderit enim sed facere velit, id, eligendi numquam delectus maiores porro cumque?</p>
 
           </div>
-          <h1 className="text-3xl font-bold underline">
-            Hello world!
-          </h1>
 
 
 
