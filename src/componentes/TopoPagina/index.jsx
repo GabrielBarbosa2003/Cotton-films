@@ -9,13 +9,15 @@ import video3 from '../../assets/videos/video3.mp4'
 import Menu from '../Menu/index.jsx'
 import './topoPagina.css'
 import '../../grid.css'
-import { Progress } from "@/components/ui/progress"
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from '@studio-freight/lenis'
 import SplitType from 'split-type'
 import { useEffect, useRef, useState } from 'react'
+import { Progress } from "@nextui-org/react";
+import { Button, ButtonGroup } from "@nextui-org/react";
+import { Pagination, PaginationItem, PaginationCursor } from "@nextui-org/react";
 
 
 
@@ -89,14 +91,14 @@ export default function TopoPagina() {
       id: 2
     }
   ]
-  
+
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [duracao, setDuracao] = useState(0)
-  
-    const [isPlaying, setIsPlaying] = useState(true)
 
-  
-  
+  const [isPlaying, setIsPlaying] = useState(true)
+
+
+
 
   function handleEnded() {
     setCurrentVideoIndex((prevIndex) =>
@@ -108,7 +110,7 @@ export default function TopoPagina() {
   function handleOnProgress(progress) {
     setDuracao(progress.playedSeconds)
     console.log(duracao)
-   
+
 
   }
   function handleError(e) {
@@ -157,9 +159,10 @@ export default function TopoPagina() {
               <h3>Video 1</h3>
               <h3>[2024]</h3>
             </div>
-            <div className='video_time'>
-              <Progress value={33} />
-            </div>
+
+
+
+
           </div>
           <div className="video">
             <div className='video_border'>
@@ -184,9 +187,13 @@ export default function TopoPagina() {
           <div className="texto_grid">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum rerum dolore. Consequatur, quisquam? Repudiandae libero consequatur
               praesentium reprehenderit enim sed facere velit, id, eligendi numquam delectus maiores porro cumque?</p>
+
           </div>
-          
-          
+          <h1 className="text-3xl font-bold underline">
+            Hello world!
+          </h1>
+
+
 
           <div className="imagem_grid">
             <img src={frame} alt='' />

@@ -4,11 +4,14 @@ import App from './App.jsx'
 import './assets/fonts/estilosGlobais.css'
 import './index.css'
 import './grid.css'
+import { NextUIProvider } from "@nextui-org/react";
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <NextUIProvider>
+      <App />
+    </NextUIProvider>
   </React.StrictMode>,
 )
