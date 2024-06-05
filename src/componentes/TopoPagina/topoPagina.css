@@ -1,8 +1,6 @@
 .home{
    position: relative;
    width: 100%;
-   max-width: 120rem; 
-   height: 67.5rem;
 }
 .imagem_banner{
    position: absolute;
@@ -10,11 +8,13 @@
    z-index: -1;
 
 }
+
+
 .home .container{
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding-top: 27.375rem;
+   padding-top: 25.375rem;
 }
 .home .container .img_films img{
    max-width: 100%;

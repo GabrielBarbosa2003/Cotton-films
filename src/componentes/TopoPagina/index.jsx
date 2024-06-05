@@ -3,9 +3,11 @@ import ReactPlayer from 'react-player'
 
 import cotonFilms from '../../assets/img/cotonFilms.png'
 import frame from '../../assets/img/Frame1.png'
-import video1 from '../../../public/videos/video1.mp4'
-import video2 from '../../../public/videos/video2.mp4'
+import video1 from '../../assets/videos/video1.mp4'
+import video2 from '../../assets/videos/video2.mp4'
 import video3 from '../../assets/videos/video3.mp4'
+import video4 from '../../assets/videos/video4.mp4'
+
 import Menu from '../Menu/index.jsx'
 import './topoPagina.css'
 import '../../grid.css'
@@ -16,7 +18,7 @@ import Lenis from '@studio-freight/lenis'
 import SplitType from 'split-type'
 import { useEffect, useRef, useState } from 'react'
 import { Progress } from "@nextui-org/react";
-import {commonColors, semanticColors} from "@nextui-org/theme";
+import { commonColors, semanticColors } from "@nextui-org/theme";
 
 
 
@@ -89,6 +91,14 @@ export default function TopoPagina() {
     {
       video: video2,
       id: 2
+    },
+    {
+      video: video3,
+      id: 3
+    },
+    {
+      video: video4,
+      id: 4
     }
   ]
 
@@ -104,6 +114,7 @@ export default function TopoPagina() {
     setCurrentVideoIndex((prevIndex) =>
       (prevIndex + 1) % videos.length
     );
+    console.log(currentVideoIndex)
   }
 
 
@@ -141,8 +152,8 @@ export default function TopoPagina() {
           url={videos[currentVideoIndex].video}
           alt=''
           playing
-          width='1920px'
-          height='1080px'
+          width='100%'
+          height='100vh'
           controls={true}
           muted={true}
           onProgress={handleOnProgress}
@@ -160,17 +171,22 @@ export default function TopoPagina() {
               <h3>[2024]</h3>
             </div>
             <div className='flex flex-col gap-6 w-full max-w-full h-1'>
-              <Progress classNames ={{
-                indicator:'bg-white',
-                base: 'h-[0.2rem]'
+              {currentVideoIndex === 0 ?
+                <Progress classNames={{
+                  indicator: 'bg-white',
+                  base: 'h-[0.2rem]'
 
-              }} 
-              aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao}/>
+                }}
+                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao} />
+
+                : <Progress classNames={{
+                  indicator: 'bg-white',
+                  base: 'h-[0.2rem]'
+
+                }}
+                  aria-label="Loading..." color='default' value={0} radius='none' minValue={0} maxValue={100} valueLabel={0} />}
+
             </div>
-
-
-
-
 
           </div>
           <div className="video">
@@ -179,20 +195,69 @@ export default function TopoPagina() {
               <h3>[2023]</h3>
             </div>
             <div className='flex flex-col gap-6 w-full max-w-full h-1'>
-              <Progress classNames ={{
-                indicator:'bg-white',
-                base: 'h-[0.2rem]'
+              {currentVideoIndex === 1 ?
+                <Progress classNames={{
+                  indicator: 'bg-white',
+                  base: 'h-[0.2rem]'
 
-              }} 
-              aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao}/>
+                }}
+                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao} id={videos.id} />
+                : <Progress classNames={{
+                  indicator: 'bg-white',
+                  base: 'h-[0.2rem]'
+
+                }}
+                  aria-label="Loading..." color='default' value={0} radius='none' minValue={0} maxValue={100} valueLabel={0} />}
             </div>
 
           </div>
           <div className="video">
             <div className='video_border'>
               <h3>Video 3</h3>
+              <h3>[2023]</h3>
+            </div>
+            <div className='flex flex-col gap-6 w-full max-w-full h-1'>
+              {currentVideoIndex === 2 ?
+                <Progress classNames={{
+                  indicator: 'bg-white',
+                  base: 'h-[0.2rem]'
+
+                }}
+                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao} />
+
+                : <Progress classNames={{
+                  indicator: 'bg-white',
+                  base: 'h-[0.2rem]'
+
+                }}
+                  aria-label="Loading..." color='default' value={0} radius='none' minValue={0} maxValue={100} valueLabel={0} />}
+
+            </div>
+
+          </div>
+          <div className="video">
+            <div className='video_border'>
+              <h3>Video 4</h3>
               <h3>[2022]</h3>
             </div>
+            <div className='flex flex-col gap-6 w-full max-w-full h-1'>
+              {currentVideoIndex === 3 ?
+                <Progress classNames={{
+                  indicator: 'bg-white',
+                  base: 'h-[0.2rem]'
+
+                }}
+                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao} />
+
+                : <Progress classNames={{
+                  indicator: 'bg-white',
+                  base: 'h-[0.2rem]'
+
+                }}
+                  aria-label="Loading..." color='default' value={0} radius='none' minValue={0} maxValue={100} valueLabel={0} />}
+
+            </div>
+
           </div>
 
         </div>
