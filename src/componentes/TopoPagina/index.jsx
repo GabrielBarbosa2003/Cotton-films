@@ -153,7 +153,7 @@ export default function TopoPagina() {
           alt=''
           playing
           width='100%'
-          height='100vh'
+          height='auto'
           controls={true}
           muted={true}
           onProgress={handleOnProgress}
@@ -161,6 +161,7 @@ export default function TopoPagina() {
         />
 
         <div className='container'>
+
           <div className="img_films">
             <img src={cotonFilms} alt='' />
           </div>
@@ -259,6 +260,9 @@ export default function TopoPagina() {
             </div>
 
           </div>
+
+
+
 
         </div>
 

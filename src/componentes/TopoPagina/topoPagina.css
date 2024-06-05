@@ -132,7 +132,11 @@
 }
 @media(max-width: 480px){
    .home .container{
-      padding-top: 5.625rem;
+      padding-top: 4rem;
+   }
+   .home .container .img_films img{
+      width: 100%;
+      max-width: 200px;
    }
    .texto_lorem .container{
       padding-top: 7rem;
@@ -143,4 +147,27 @@
       font-size: 0.5rem;
       
    }
+
+   .video{
+      width: 100%;
+      padding-top: 0px;
+   
+   }
+   .video .video_border{
+      width: 100%;
+      padding-bottom: 10px;
+      font-size: 8px;
+   }
+   .video_time{
+      width: 1346px;
+      
+   }
+   .home .container{
+      top: 1px;
+   }
+   .films{
+      width: 100%;
+      padding-top: 10px;
+   }
+   
 }
