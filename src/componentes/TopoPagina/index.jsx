@@ -16,6 +16,7 @@ import Lenis from '@studio-freight/lenis'
 import SplitType from 'split-type'
 import { useEffect, useRef, useState } from 'react'
 import { Progress } from "@nextui-org/react";
+import {commonColors, semanticColors} from "@nextui-org/theme";
 
 
 
@@ -158,8 +159,13 @@ export default function TopoPagina() {
               <h3>Video 1</h3>
               <h3>[2024]</h3>
             </div>
-            <div className='video_time'>
-              <Progress aria-label="Loading..." value={10} />
+            <div className='flex flex-col gap-6 w-full max-w-full h-1'>
+              <Progress classNames ={{
+                indicator:'bg-white',
+                base: 'h-[0.2rem]'
+
+              }} 
+              aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao}/>
             </div>
 
 
@@ -172,6 +178,15 @@ export default function TopoPagina() {
               <h3>Video 2</h3>
               <h3>[2023]</h3>
             </div>
+            <div className='flex flex-col gap-6 w-full max-w-full h-1'>
+              <Progress classNames ={{
+                indicator:'bg-white',
+                base: 'h-[0.2rem]'
+
+              }} 
+              aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao}/>
+            </div>
+
           </div>
           <div className="video">
             <div className='video_border'>
