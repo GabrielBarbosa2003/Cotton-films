@@ -85,11 +85,11 @@ export default function TopoPagina() {
 
   const videos = [
     {
-      video: video2,
+      video: video1,
       id: 1
     },
     {
-      video: video1,
+      video: video2,
       id: 2
     },
     {
@@ -128,7 +128,6 @@ export default function TopoPagina() {
   const handleReady = () => {
     const videoDuration = playerRef.current.getDuration();
     setDuration(videoDuration);
-    console.log(duration)
   };
   
 
