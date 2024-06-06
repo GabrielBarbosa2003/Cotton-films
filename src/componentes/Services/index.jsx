@@ -57,8 +57,6 @@ export default function Services() {
             onMouseEnter={() => {
               setHover(1)
             }}
-
-
           >
             <p>// NAME OF SERVICE</p>
             <p>01</p>

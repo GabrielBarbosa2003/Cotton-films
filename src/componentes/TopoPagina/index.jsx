@@ -167,9 +167,10 @@ export default function TopoPagina() {
           </div>
 
           <div className="video">
-            <div className='video_border'>
+            <div className={currentVideoIndex === 0 ? 'video_border_white' : 'video_border'}>
               <h3>Video 1</h3>
               <h3>[2024]</h3>
+
             </div>
             <div className='flex flex-col gap-6 w-full max-w-full h-1'>
               {currentVideoIndex === 0 ?
@@ -191,7 +192,7 @@ export default function TopoPagina() {
 
           </div>
           <div className="video">
-            <div className='video_border'>
+            <div className={currentVideoIndex === 1 ? 'video_border_white' : 'video_border'}>
               <h3>Video 2</h3>
               <h3>[2023]</h3>
             </div>
@@ -213,7 +214,7 @@ export default function TopoPagina() {
 
           </div>
           <div className="video">
-            <div className='video_border'>
+            <div className={currentVideoIndex === 2 ? 'video_border_white' : 'video_border'}>
               <h3>Video 3</h3>
               <h3>[2023]</h3>
             </div>
@@ -237,7 +238,7 @@ export default function TopoPagina() {
 
           </div>
           <div className="video">
-            <div className='video_border'>
+            <div className={currentVideoIndex === 3 ? 'video_border_white' : 'video_border'}>
               <h3>Video 4</h3>
               <h3>[2022]</h3>
             </div>
