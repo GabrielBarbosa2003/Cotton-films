@@ -85,11 +85,11 @@ export default function TopoPagina() {
 
   const videos = [
     {
-      video: video1,
+      video: video2,
       id: 1
     },
     {
-      video: video2,
+      video: video1,
       id: 2
     },
     {
@@ -104,8 +104,10 @@ export default function TopoPagina() {
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [duracao, setDuracao] = useState(0)
+  const playerRef = useRef(null);
 
   const [isPlaying, setIsPlaying] = useState(true)
+  const [duration, setDuration] = useState(0);
 
 
 
@@ -114,19 +116,21 @@ export default function TopoPagina() {
     setCurrentVideoIndex((prevIndex) =>
       (prevIndex + 1) % videos.length
     );
-    console.log(currentVideoIndex)
   }
 
 
   function handleOnProgress(progress) {
     setDuracao(progress.playedSeconds)
-    console.log(duracao)
+
 
 
   }
-  function handleError(e) {
-    console.error('Error playing video:', e);
-  }
+  const handleReady = () => {
+    const videoDuration = playerRef.current.getDuration();
+    setDuration(videoDuration);
+    console.log(duration)
+  };
+  
 
   // function handlePlay () {
   //   console.log('onPlay')
@@ -151,11 +155,13 @@ export default function TopoPagina() {
         <ReactPlayer className="imagem_banner"
           url={videos[currentVideoIndex].video}
           alt=''
+          ref={playerRef}
           playing
           width='100%'
           height='auto'
           controls={true}
           muted={true}
+          onReady={handleReady}
           onProgress={handleOnProgress}
           onEnded={handleEnded}
         />
@@ -179,7 +185,7 @@ export default function TopoPagina() {
                   base: 'h-[0.2rem]'
 
                 }}
-                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao} />
+                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={duration} valueLabel={duracao} data-indeterminate />
 
                 : <Progress classNames={{
                   indicator: 'bg-white',
@@ -203,7 +209,7 @@ export default function TopoPagina() {
                   base: 'h-[0.2rem]'
 
                 }}
-                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao} id={videos.id} />
+                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={duration} valueLabel={duracao} id={videos.id} />
                 : <Progress classNames={{
                   indicator: 'bg-white',
                   base: 'h-[0.2rem]'
@@ -225,7 +231,7 @@ export default function TopoPagina() {
                   base: 'h-[0.2rem]'
 
                 }}
-                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao} />
+                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={duration} valueLabel={duracao} />
 
                 : <Progress classNames={{
                   indicator: 'bg-white',
@@ -249,7 +255,7 @@ export default function TopoPagina() {
                   base: 'h-[0.2rem]'
 
                 }}
-                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={100} valueLabel={duracao} />
+                  aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={duration} valueLabel={duracao} />
 
                 : <Progress classNames={{
                   indicator: 'bg-white',
