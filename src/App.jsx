@@ -11,12 +11,12 @@ function App() {
   return (
     <>
       <TopoPagina />
-      <Galeria/>
+      {/* <Galeria/>
       <Services/>
       <Infos/>
       <Sobre/>
       <Times/>
-      <Bottom/>
+      <Bottom/> */}
     </>
   )
 }
