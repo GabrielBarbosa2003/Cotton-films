@@ -150,7 +150,6 @@ export default function TopoPagina() {
   return (
     <>
       <header className="home">
-        <Menu />
         <ReactPlayer className="imagem_banner"
           url={videos[currentVideoIndex].video}
           alt=''
