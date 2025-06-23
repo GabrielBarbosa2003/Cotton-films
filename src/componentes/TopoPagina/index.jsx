@@ -7,6 +7,9 @@ import video1 from '../../assets/videos/video1.mp4'
 import video2 from '../../assets/videos/video2.mp4'
 import video3 from '../../assets/videos/video3.mp4'
 import video4 from '../../assets/videos/video4.mp4'
+import logoWhite from '../../assets/logo-white.svg'
+import logoGray from '../../assets/logo-gray.svg'
+
 
 import Menu from '../Menu/index.jsx'
 import './topoPagina.css'
@@ -177,21 +180,26 @@ export default function TopoPagina() {
             <div className="video">
               <div className={currentVideoIndex === 0 ? 'video_border_white' : 'video_border'}>
                 <h3>Video 1</h3>
+                {currentVideoIndex === 0 ?
+                <img src={logoWhite} alt='white logo' />
+                :
+                <img src={logoGray} alt='gray logo' />
+                }
+                
                 <h3>[2024]</h3>
-
               </div>
               <div className='flex flex-col gap-6 w-full max-w-full h-1'>
                 {currentVideoIndex === 0 ?
                   <Progress classNames={{
                     indicator: 'bg-white',
-                    base: 'h-[0.2rem]'
+                    base: 'h-[0.1rem]'
 
                   }}
                     aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={duration} valueLabel={duracao} data-indeterminate />
 
                   : <Progress classNames={{
                     indicator: 'bg-white',
-                    base: 'h-[0.2rem]'
+                    base: 'h-[0.1rem]'
 
                   }}
                     aria-label="Loading..." color='default' value={0} radius='none' minValue={0} maxValue={100} valueLabel={0} />}
@@ -202,19 +210,24 @@ export default function TopoPagina() {
             <div className="video">
               <div className={currentVideoIndex === 1 ? 'video_border_white' : 'video_border'}>
                 <h3>Video 2</h3>
+                   {currentVideoIndex === 1 ?
+                <img src={logoWhite} alt='white logo' />
+                :
+                <img src={logoGray} alt='gray logo' />
+                }
                 <h3>[2023]</h3>
               </div>
               <div className='flex flex-col gap-6 w-full max-w-full h-1'>
                 {currentVideoIndex === 1 ?
                   <Progress classNames={{
                     indicator: 'bg-white',
-                    base: 'h-[0.2rem]'
+                    base: 'h-[0.1rem]'
 
                   }}
                     aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={duration} valueLabel={duracao} id={videos.id} />
                   : <Progress classNames={{
                     indicator: 'bg-white',
-                    base: 'h-[0.2rem]'
+                    base: 'h-[0.1rem]'
 
                   }}
                     aria-label="Loading..." color='default' value={0} radius='none' minValue={0} maxValue={100} valueLabel={0} />}
@@ -224,20 +237,25 @@ export default function TopoPagina() {
             <div className="video">
               <div className={currentVideoIndex === 2 ? 'video_border_white' : 'video_border'}>
                 <h3>Video 3</h3>
+                   {currentVideoIndex === 2 ?
+                <img src={logoWhite} alt='white logo' />
+                :
+                <img src={logoGray} alt='gray logo' />
+                }
                 <h3>[2023]</h3>
               </div>
               <div className='flex flex-col gap-6 w-full max-w-full h-1'>
                 {currentVideoIndex === 2 ?
                   <Progress classNames={{
                     indicator: 'bg-white',
-                    base: 'h-[0.2rem]'
+                    base: 'h-[0.1rem]'
 
                   }}
                     aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={duration} valueLabel={duracao} />
 
                   : <Progress classNames={{
                     indicator: 'bg-white',
-                    base: 'h-[0.2rem]'
+                    base: 'h-[0.1rem]'
 
                   }}
                     aria-label="Loading..." color='default' value={0} radius='none' minValue={0} maxValue={100} valueLabel={0} />}
@@ -248,20 +266,25 @@ export default function TopoPagina() {
             <div className="video">
               <div className={currentVideoIndex === 3 ? 'video_border_white' : 'video_border'}>
                 <h3>Video 4</h3>
+                   {currentVideoIndex === 3 ?
+                <img src={logoWhite} alt='white logo' />
+                :
+                <img src={logoGray} alt='gray logo' />
+                }
                 <h3>[2022]</h3>
               </div>
               <div className='flex flex-col gap-6 w-full max-w-full h-1'>
                 {currentVideoIndex === 3 ?
                   <Progress classNames={{
                     indicator: 'bg-white',
-                    base: 'h-[0.2rem]'
+                    base: 'h-[0.1rem]'
 
                   }}
                     aria-label="Loading..." color='default' value={duracao} radius='none' minValue={0} maxValue={duration} valueLabel={duracao} />
 
                   : <Progress classNames={{
                     indicator: 'bg-white',
-                    base: 'h-[0.2rem]'
+                    base: 'h-[0.1rem]'
 
                   }}
                     aria-label="Loading..." color='default' value={0} radius='none' minValue={0} maxValue={100} valueLabel={0} />}
