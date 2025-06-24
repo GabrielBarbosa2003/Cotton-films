@@ -1,14 +1,21 @@
-.image_service img{
+.image_service {
+    overflow: hidden;
+}
+
+.image_service img {
     max-width: 100%;
     width: 123.75rem;
+    object-position: 50% 0%;
 }
-.images_services{
+
+.images_services {
     display: flex;
     flex-direction: column;
     padding-top: 3.75rem;
+    position: relative;
 }
 
-.images_services .lista_images{
+.images_services .lista_images {
     display: flex;
     border-bottom: 1px #333333 solid;
     color: #333333;
@@ -16,37 +23,65 @@
     padding-top: 3.125rem;
     justify-content: space-between;
 }
-.images_services .lista_images img{
-    filter:#333333 ;
+
+.images_services .lista_images img {
+    filter: #333333;
 }
-.images_services .lista_images p{
+
+.images_services .lista_images p {
     padding-bottom: 1.6875rem;
 }
 
-.images_services .lista_images:hover{
+.images_services .lista_images:hover {
     color: #E6E6E6;
     border-color: #E6E6E6;
 }
 
 
 
-.container{
+.container-services {
     position: relative;
 }
-.images{
+
+.images {
+    width: 1px;
+    height: 1px;
+    top: 0;
+    left: 0;
     position: absolute;
-    right: 5rem;
-   
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+
 }
-.images img {
-    transition: opacity 0.5s ease;  /* Transição suave para a propriedade opacidade */
-    opacity: 0;                     /* Estado inicial da opacidade quando não está hover */
+
+.images-container {
+    width: 100%;
+    max-width: 21.5rem;
+    height: 30vw;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    /* overflow: hidden;
+    visibility: hidden; */
+    pointer-events: none;
+    
+}
+
+.images-container.on {
+    visibility: visible;
+}
+
+
+/* .images img {
+    transition: opacity 0.5s ease;  
+    opacity: 0;                     
     width: 100%;
     max-width: 21.5rem;
   }
   .images_services:hover .images img {
-    opacity: 1; /* Quando .images_services é hover, a imagem se torna visível */
-  }
+    opacity: 1; 
+  } */
 
 
 

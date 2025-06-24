@@ -12,9 +12,9 @@ function App() {
     <>
       <TopoPagina />
       <Galeria/>
-      {/* <Services/>
+      <Services/>
       <Infos/>
-      <Sobre/>
+      {/* <Sobre/>
       <Times/>
       <Bottom/> */}
     </>
