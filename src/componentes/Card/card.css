@@ -6,7 +6,25 @@
     width: 100%;
     max-width: 450px;
     border-radius: 10px;
+    position: relative;
 
+}
+.project-galery{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+.project-galery p{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+.project-galery p span{
+    opacity: 0.6;
 }
 
 .quadrados img {
@@ -43,7 +61,11 @@
 
 @media(max-width: 1200px) {}
 
-@media(max-width: 991px) {}
+@media(max-width: 991px) {
+    .project-galery{
+   display: none;
+}
+}
 
 @media(max-width: 768px) {}
 
@@ -53,4 +75,5 @@
     .quadrados img {
     height: 14.375rem;
 }
+
 }
