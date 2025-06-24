@@ -16,7 +16,7 @@ function App() {
       <Infos/>
       <Sobre/>
       <Times/> 
-       {/* <Bottom/> */}
+      <Bottom/>
     </>
   )
 }

@@ -14,6 +14,7 @@ import { useGSAP } from '@gsap/react';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Times from '../Times'
+import { useRef } from 'react'
 
 
 
@@ -21,12 +22,12 @@ import Times from '../Times'
 
 
 export default function Bottom() {
-  
+
 
   return (
     <>
-      <footer className='image_bottom'>
-        <div className='container'>
+      <section className='image_bottom'>
+        <div className='container-bottom'>
           <div className='talk'>
             <img src={letstalk} alt='' />
           </div>
@@ -84,7 +85,7 @@ export default function Bottom() {
             </div>
           </div>
         </div>
-      </footer>
+      </section>
     </>
 
 

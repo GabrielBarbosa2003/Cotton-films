@@ -12,30 +12,39 @@ import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-
-
+import { useRef } from 'react'
 
 
 
 
 export default function Times() {
+    gsap.registerPlugin(ScrollTrigger, useGSAP)
 
+    const containerPinRef = useRef(null)
+    const pinContainerRef = useRef(null)
 
-    useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger)
-        gsap.registerPlugin(useGSAP);
-
-        let panels = gsap.utils.toArray(".teste");
-
+    function createPinning() {
         ScrollTrigger.create({
-            trigger: panels,
-            start: "top top",
-            pin: false,
+            trigger: containerPinRef.current,
+            start: 'top top',
+            end: 'bottom top',
+            pin: pinContainerRef.current,
             pinSpacing: false,
+            scrub: true,
+            markers: false
+
         })
 
-    }, [])
+
+
+    }
+    useGSAP(() => {
+        if(containerPinRef.current){
+            createPinning()
+        }
+        
+    })
+
 
 
     const images = [
@@ -46,24 +55,25 @@ export default function Times() {
     ]
 
     return (
-        <section className='container-times'>
+        <section className='times-container' ref={containerPinRef}>
             <div className='grid-global'>
+                <div className='pin-container' ref={pinContainerRef}>
 
+                    <div className='cads_flex'>
+                        {
+                            images.map((image) => (
+                                <div key={image.id}>
+                                    <TimesCard id={image.id} img={image.img} />
+                                </div>
+                            ))
 
-                <div className='cads_flex'>
-                    {
-                        images.map((image) => (
-                            <div>
-                                <TimesCard id={image.id} img={image.img} />
-                            </div>
-                        ))
+                        }
+                    </div>
+                    <div className='ourtime'>
+                        <img src={our} alt='' />
+                        <img src={time} alt='' />
 
-                    }
-                </div>
-                <div className='ourtime'>
-                    <img src={our} alt='' />
-                    <img src={time} alt='' />
-
+                    </div>
                 </div>
             </div>
 
