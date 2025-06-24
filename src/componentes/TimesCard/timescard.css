@@ -1,8 +1,7 @@
 .card .card_top_times{
     overflow: hidden;
     width: 100%;
-    max-width: 332px;
-    height: 400px;
+    max-width: 20.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,6 +73,11 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .card .card_top_times .bio img{
+        width: 100%;
+        max-width: 10vw;
+    }
+}
 
 @media(max-width: 480px) {}

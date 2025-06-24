@@ -31,8 +31,8 @@ export default function Times() {
         ScrollTrigger.create({
             trigger: panels,
             start: "top top",
-            pin: true,
-            pinSpacing:false,
+            pin: false,
+            pinSpacing: false,
         })
 
     }, [])
@@ -46,8 +46,10 @@ export default function Times() {
     ]
 
     return (
-        <div className='teste'>
-            <div className='container'>
+        <section className='container-times'>
+            <div className='grid-global'>
+
+
                 <div className='cads_flex'>
                     {
                         images.map((image) => (
@@ -63,14 +65,14 @@ export default function Times() {
                     <img src={time} alt='' />
 
                 </div>
-
-
             </div>
 
 
+        </section>
 
 
 
-        </div>
+
+
     )
 }

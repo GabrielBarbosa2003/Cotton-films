@@ -15,8 +15,8 @@ function App() {
       <Services/>
       <Infos/>
       <Sobre/>
-      {/* <Times/> */}
-      {/* <Bottom/> */}
+      <Times/> 
+       {/* <Bottom/> */}
     </>
   )
 }

@@ -1,6 +1,10 @@
+.container-times {
+    margin-top: 9.375rem;
+}
+
 .cads_flex {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
 }
 
@@ -22,6 +26,26 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
 
-@media(max-width: 480px) {}
+    .card_bottom .direct p,
+    .card_bottom .projeto_nome p {
+        font-size: 8px;
+    }
+    .ourtime{
+        width: 100%;
+        max-width: 40vw;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .cads_flex {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+
+    }
+
+}
