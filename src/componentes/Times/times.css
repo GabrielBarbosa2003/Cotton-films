@@ -47,5 +47,14 @@
         column-gap: 20px;
 
     }
+    .card .card_bottom{
+        gap: 10px;
+    }
+    .direct{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        text-align: end;
+    }
 
 }
