@@ -64,6 +64,9 @@
         column-gap: 20px;
         row-gap: 30px;
     }
+    .texto_info{
+        grid-template-columns: 0% 100%
+    }
 }
 
 @media(max-width: 480px) {}
