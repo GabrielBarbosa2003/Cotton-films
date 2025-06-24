@@ -58,10 +58,40 @@
 
 @media(max-width: 1200px) {}
 
-@media(max-width: 991px) {}
+@media(max-width: 991px) {
+    .sobre_texto .texto_sobre{
+        width: auto;
+    }
+    .sobre .sobre_texto{
+        align-items: start;
+        justify-content: start;
+        padding: 0px 10px;
+    }
+    .texto_sobre p{
+        font-size: 14px;
+    }
+    .sobre{
+        column-gap: 30px;
+        margin-top: 40px;
+    }
+    .sobre_texto .redes {
+        bottom: 10px;
+    }
+}
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .sobre{
+        grid-template-columns: 100%;
+    }
+}
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .sobre_texto .redes{
+        display: none;
+    }
+    .section .about{
+        padding-left: 0px;
+    }
+}
