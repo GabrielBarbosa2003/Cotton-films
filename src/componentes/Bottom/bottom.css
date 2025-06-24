@@ -18,23 +18,30 @@
  
 }
 .bottom_grid{
-    display: grid;
-    grid-template-columns: 70% 30%;
-
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+}
+.bottom_grid .grid_esquerda{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+   
 }
 .bottom_grid .grid_esquerda img{
-    position: absolute;
-    bottom: 3.125rem;
+    width: 100%;
+    width: 150px;
+   
 }
 .bottom_grid .grid_esquerda h1{
-    position: absolute;
-    padding-top: 28.125rem;
     font-size: 3.125rem;
 }
 .bottom_grid .grid_direita{
     display: flex;
     justify-content: space-between;
-    padding-top: 60%;
+    width: 40%;
     
 }
 
@@ -55,8 +62,26 @@
 
 @media(max-width: 991px) {}
 
-@media(max-width: 768px) {}
+@media(max-width: 800px) {
+    .bottom_grid .grid_esquerda h1 {
+        font-size: 1.5rem;
+    }
+}
 
 @media(max-width: 600px) {}
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+     .bottom_grid .grid_esquerda h1 {
+        font-size: 1rem;
+    }
+    .bottom_grid .grid_direita{
+        width: 70%;
+    }
+    .bottom_grid{
+        flex-direction: column;
+        gap: 150px;
+    }
+    .bottom_grid .grid_esquerda h1{
+        font-size: 1.7rem;
+    }
+}

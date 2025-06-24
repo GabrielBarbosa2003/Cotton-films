@@ -35,57 +35,58 @@ export default function Bottom() {
               <img src={letstalk} alt='' />
             </div>
 
-            <div className='bottom_grid'>
-              <div className='grid_esquerda'>
-                <h1>HELLO@COTTONFILMS.COM</h1>
-                <img src={logo_arthur} alt='' />
-              </div>
+          </div>
+          <div className='bottom_grid'>
+            <div className='grid_esquerda'>
+              <h1>HELLO@COTTONFILMS.COM</h1>
+              <img src={logo_arthur} alt='' />
+            </div>
 
-              <div className='grid_direita'>
+            <div className='grid_direita'>
 
-                <div className='grid_contatos'>
-                  <div className='cttn'>
-                    <img src={cttn} alt='' />
-                  </div>
+              <div className='grid_contatos'>
+                <div className='cttn'>
+                  <img src={cttn} alt='' />
+                </div>
 
-                  <div className='contatos_flex'>
-                        <img src={contact} alt='' />
-                    <ul className='lista_flex'>
-                      
-                      <li>
-                        <motion.img
-                          src={instagram}
-                          alt=''
-                          whileHover={{ scale: 1.1 }}
-                          transition={{ duration: 0.2 }}
-                        />
-                      </li>
-                      <li>
-                        <motion.img
-                          src={save}
-                          alt=''
-                          whileHover={{ scale: 1.1 }}
-                          transition={{ duration: 0.2 }}
-                        />
-                      </li>
-                      <li>
-                        <motion.img
-                          src={dri}
-                          alt=''
-                          whileHover={{ scale: 1.1 }}
-                          transition={{ duration: 0.2 }}
-                        />
-                      </li>
-                    </ul>
+                <div className='contatos_flex'>
+                  <img src={contact} alt='' />
+                  <ul className='lista_flex'>
 
-                  </div>
+                    <li>
+                      <motion.img
+                        src={instagram}
+                        alt=''
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.2 }}
+                      />
+                    </li>
+                    <li>
+                      <motion.img
+                        src={save}
+                        alt=''
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.2 }}
+                      />
+                    </li>
+                    <li>
+                      <motion.img
+                        src={dri}
+                        alt=''
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.2 }}
+                      />
+                    </li>
+                  </ul>
 
                 </div>
 
-
-
               </div>
+
+
+
             </div>
+
           </div>
         </div>
       </section>
