@@ -11,7 +11,6 @@ import logoWhite from '../../assets/logo-white.svg'
 import logoGray from '../../assets/logo-gray.svg'
 
 
-import Menu from '../Menu/index.jsx'
 import './topoPagina.css'
 import '../../grid.css'
 
@@ -181,11 +180,11 @@ export default function TopoPagina() {
               <div className={currentVideoIndex === 0 ? 'video_border_white' : 'video_border'}>
                 <h3>Video 1</h3>
                 {currentVideoIndex === 0 ?
-                <img src={logoWhite} alt='white logo' />
-                :
-                <img src={logoGray} alt='gray logo' />
+                  <img src={logoWhite} alt='white logo' />
+                  :
+                  <img src={logoGray} alt='gray logo' />
                 }
-                
+
                 <h3>[2024]</h3>
               </div>
               <div className='flex flex-col gap-6 w-full max-w-full h-1'>
@@ -210,10 +209,10 @@ export default function TopoPagina() {
             <div className="video">
               <div className={currentVideoIndex === 1 ? 'video_border_white' : 'video_border'}>
                 <h3>Video 2</h3>
-                   {currentVideoIndex === 1 ?
-                <img src={logoWhite} alt='white logo' />
-                :
-                <img src={logoGray} alt='gray logo' />
+                {currentVideoIndex === 1 ?
+                  <img src={logoWhite} alt='white logo' />
+                  :
+                  <img src={logoGray} alt='gray logo' />
                 }
                 <h3>[2023]</h3>
               </div>
@@ -237,10 +236,10 @@ export default function TopoPagina() {
             <div className="video">
               <div className={currentVideoIndex === 2 ? 'video_border_white' : 'video_border'}>
                 <h3>Video 3</h3>
-                   {currentVideoIndex === 2 ?
-                <img src={logoWhite} alt='white logo' />
-                :
-                <img src={logoGray} alt='gray logo' />
+                {currentVideoIndex === 2 ?
+                  <img src={logoWhite} alt='white logo' />
+                  :
+                  <img src={logoGray} alt='gray logo' />
                 }
                 <h3>[2023]</h3>
               </div>
@@ -266,10 +265,10 @@ export default function TopoPagina() {
             <div className="video">
               <div className={currentVideoIndex === 3 ? 'video_border_white' : 'video_border'}>
                 <h3>Video 4</h3>
-                   {currentVideoIndex === 3 ?
-                <img src={logoWhite} alt='white logo' />
-                :
-                <img src={logoGray} alt='gray logo' />
+                {currentVideoIndex === 3 ?
+                  <img src={logoWhite} alt='white logo' />
+                  :
+                  <img src={logoGray} alt='gray logo' />
                 }
                 <h3>[2022]</h3>
               </div>
@@ -301,24 +300,28 @@ export default function TopoPagina() {
 
       </section>
 
-      {/* <div className="texto_lorem">
-        <div className="container">
+      <section className="texto_lorem">
+        <div className='grid-global'>
 
-          <div className="texto_grid">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum rerum dolore. Consequatur, quisquam? Repudiandae libero consequatur
-              praesentium reprehenderit enim sed facere velit, id, eligendi numquam delectus maiores porro cumque?</p>
+
+          <div className="container-text">
+
+            <div className="texto_grid">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum rerum dolore. Consequatur, quisquam? Repudiandae libero consequatur
+                praesentium reprehenderit enim sed facere velit, id, eligendi numquam delectus maiores porro cumque?</p>
+
+            </div>
+
+
+
+            <div className="imagem_grid">
+              <img src={frame} alt='' />
+            </div>
 
           </div>
-
-
-
-          <div className="imagem_grid">
-            <img src={frame} alt='' />
-          </div>
-
         </div>
 
-      </div> */}
+      </section>
 
 
 

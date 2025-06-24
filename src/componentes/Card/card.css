@@ -34,11 +34,15 @@
 }
 
 
-@media(max-width: 480px) {
-  
-    .quadrados .case {
-        width: 100%;
-        max-width: 80px;
-    
-    }
-}
+/* responsivo */
+@media(max-width: 1400px) {}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}

@@ -20,34 +20,8 @@
 
 @media(max-width: 991px) {}
 
-@media(max-width: 768px) {
-    .ourtime img {
-        width: 100%;
-        max-width: 12.5rem;
-    }
-
-}
+@media(max-width: 768px) {}
 
 @media(max-width: 600px) {}
 
-@media(max-width: 480px) {
-    .card_bottom .projeto_nome p {
-        font-size: 6px;
-    }
-
-    .card_bottom .direct p {
-        font-size: 6px;
-    }
-
-    .ourtime img {
-        width: 100%;
-        max-width: 9.5rem;
-    }
-
-    .cads_flex{
-        display: flex;
-        flex-wrap: wrap;
-        
-    }
-
-}
+@media(max-width: 480px) {}

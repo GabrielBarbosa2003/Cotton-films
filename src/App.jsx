@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <TopoPagina />
-      {/* <Galeria/>
-      <Services/>
+      <Galeria/>
+      {/* <Services/>
       <Infos/>
       <Sobre/>
       <Times/>

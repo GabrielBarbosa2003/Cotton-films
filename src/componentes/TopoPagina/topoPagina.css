@@ -92,7 +92,7 @@
 
 
 
-.texto_lorem .container {
+.texto_lorem .container-text {
    display: flex;
    flex-direction: row;
    padding-top: 7.9375rem;
@@ -100,7 +100,7 @@
    justify-content: space-between;
 }
 
-.texto_lorem .container .texto_grid {
+.texto_lorem .container-text .texto_grid {
    color: white;
    max-width: 50.75rem;
    width: 100%;
@@ -110,7 +110,7 @@
 
 }
 
-.texto_lorem .container .imagem_grid img {
+.texto_lorem .container-text .imagem_grid img {
    width: 100%;
    max-width: 28.25rem;
 
@@ -120,13 +120,31 @@
 
 /* responsivo */
 @media(max-width: 1400px) {}
+@media(max-width: 1370px) {
+   .texto_lorem .container-text{
+      flex-direction: column;
+      gap: 40px;
+      align-items: end;
+   }
+   .texto_lorem .container-text .texto_grid{
+      max-width: 100%;
+   }
+}
 
 @media(max-width: 1200px) {}
 
-@media(max-width: 991px) {}
+@media(max-width: 991px) {
+   .container-text .texto_grid p{
+      font-size: 26px;
+   }
+}
 
 @media(max-width: 768px) {}
 
 @media(max-width: 600px) {}
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+   .texto_lorem .container-text{
+      padding-top: 5rem;
+   }
+}
