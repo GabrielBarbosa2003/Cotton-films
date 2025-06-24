@@ -3,13 +3,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
 
 }
 
 .quadrados img {
     width: 100%;
-    max-width: 28.125rem;
+    max-width: 450px;
     position: relative;
+    border-radius: 10px;
 }
 
 .quadrados .case {
@@ -45,4 +49,8 @@
 
 @media(max-width: 600px) {}
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .quadrados img {
+    height: 14.375rem;
+}
+}

@@ -29,39 +29,48 @@ export default function Galeria() {
 
   return (
     <section className="sec-galeria">
-      <div className="container">
-        <div className="logo_galeria">
-          <img src={galeria_img} alt='' />
-        </div>
-
-        <div className="galeria">
+      <div className='grid-global'>
 
 
-          <Swiper
-            navigation={false}
-            modules={[Navigation, Grid]}
-            slidesPerView={3}
-            className="image"
-            loop={true}
-            spaceBetween={10}
-            
-          >
-            {
-              
-              imagens.map((imagem) => (
-                <SwiperSlide key={imagem.id}>
-                    <Card img={imagem.image}/>
+        <div className="container-galeria">
+          <div className="logo_galeria">
+            <img src={galeria_img} alt='' />
+          </div>
+
+          <div className="galeria">
+
+
+            <Swiper
+              navigation={false}
+              modules={[Navigation, Grid]}
+              slidesPerView={3}
+              className="image"
+              loop={true}
+              spaceBetween={10}
+              breakpoints={{
+                1440: {
+                  slidesPerView: 4
+                }
+              }}
+
+            >
+              {
+
+                imagens.map((imagem) => (
+                  <SwiperSlide key={imagem.id}>
+                    <Card img={imagem.image} />
                   </SwiperSlide>
-              ))
-              
-            }
+                ))
+
+              }
 
 
-        </Swiper>
+            </Swiper>
 
+          </div>
+
+        </div>
       </div>
-
-    </div>
 
     </section >
 
