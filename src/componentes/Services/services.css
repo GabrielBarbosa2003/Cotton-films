@@ -65,7 +65,7 @@
     /* overflow: hidden;
     visibility: hidden; */
     pointer-events: none;
-    
+
 }
 
 .images-container.on {
@@ -88,12 +88,39 @@
 /* responsivo */
 @media(max-width: 1400px) {}
 
-@media(max-width: 1200px) {}
+@media(max-width: 1200px) {
+    .images-container {
+        left: 60%;
+    }
+}
 
-@media(max-width: 991px) {}
+@media(max-width: 991px) {
+    .images-container {
+        width: 30vw;
+        left: 62%;
+    }
+}
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+     .images-container {
+        width: 25vw;
+        left: 67%;
+        top: 10%;
+    }
+}
 
 @media(max-width: 600px) {}
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+     .images-container {
+        width: 23vw;
+        left: 63%;
+        top: 10%;
+    }
+    .images_services .lista_images p{
+        width: 300px;
+    }
+    .image_service img{
+        height: 20vh;
+    }
+}
